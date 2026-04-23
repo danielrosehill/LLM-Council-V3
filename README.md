@@ -1,5 +1,9 @@
 # LLM Council V3 — "Remix" 2
 
+![Whiteboard sketch](whiteboard/IMG20260423113826_wb.jpg)
+
+![LLM Council Remix 2 diagram](whiteboard/llm-council-remix-diagram.png)
+
 A remix of Andrej Karpathy's [`karpathy/llm-council`](https://github.com/karpathy/llm-council) with a voice-first, batch-oriented twist.
 
 ## What I'm trying to build
@@ -20,16 +24,6 @@ This remix keeps the council pattern but changes the front end and the batching 
 
 So the loop is: *ramble in, typeset PDF out — with a council debate in the middle.*
 
-## Whiteboard sketch
-
-The concept, scribbled out:
-
-![Whiteboard sketch](whiteboard/IMG20260423113826_wb.jpg)
-
-Cleaned-up diagram version (via Nano Banana):
-
-![LLM Council Remix 2 diagram](whiteboard/llm-council-remix-diagram.png)
-
 ## Stack (planned)
 
 - **API**: OpenRouter (same as upstream — one key, many models).
@@ -43,6 +37,18 @@ Cleaned-up diagram version (via Nano Banana):
 - This repo: voice-in / PDF-out batch pipeline, same council/chairman scoring underneath.
 
 Not a fork — a reimplementation around a different input and output surface. Credit to Karpathy for the council pattern that sits at the heart of it.
+
+## Diagram generation
+
+The cleaned-up diagram above was produced by **Nano Banana 2** via the [Fal](https://fal.ai/) API, driven by my [`nano-tech-diagrams-mcp`](https://github.com/danielrosehill/nano-tech-diagrams-mcp) server (the `whiteboard_cleanup` tool, `clean_polished` style).
+
+For reference, the prompt assembled and sent to Nano Banana 2 was:
+
+> Take this whiteboard photograph and transform it into a polished diagram. Remove the physical whiteboard, markers, frame, and any background elements. Correct any perspective distortion so the output appears as a perfectly straight-on, top-down view regardless of the angle the original photo was taken from. Preserve all the original content, text, and diagrams. Where handwriting is ambiguous, infer the correct spelling from context rather than reproducing the raw strokes literally — for example, a word that looks like 'proxknox' should be rendered as 'Proxmox' if that is the obvious intended meaning. Render as a beautiful and polished graphic featuring clear labels and icons on a clean white background. Content should be legible and well-organized with a clear visual hierarchy. Use clean shapes, consistent line weights, and a professional color palette. The result should be visually attractive and easy to understand.
+>
+> The following specific terms appear in this whiteboard and should be spelled exactly as listed: LLM Council, Remix, MP3, STT, Cleanup, Text, Context, Aggregator, Typst, PDF Report, Actuator, Runner, Daniel Rosehill
+
+Credit: **Nano Banana 2** (Google), served via **[Fal](https://fal.ai/)**.
 
 ---
 
